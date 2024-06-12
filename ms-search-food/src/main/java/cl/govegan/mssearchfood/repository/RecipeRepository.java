@@ -1,4 +1,4 @@
-package cl.govegan.mssearchfood.repositories.reciperepository;
+package cl.govegan.mssearchfood.repository;
 
 import java.util.Optional;
 
@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.lang.NonNull;
 
-import cl.govegan.mssearchfood.models.recipe.Recipe;
+import cl.govegan.mssearchfood.model.recipe.Recipe;
 
 public interface RecipeRepository extends MongoRepository<Recipe, String>{
 

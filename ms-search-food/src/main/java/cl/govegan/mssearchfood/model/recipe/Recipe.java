@@ -1,11 +1,11 @@
-package cl.govegan.mssearchfood.utils.requests.recipe;
+package cl.govegan.mssearchfood.model.recipe;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import cl.govegan.mssearchfood.utils.requests.recipe.recipefields.NutritionalInfo;
-import cl.govegan.mssearchfood.utils.requests.recipe.recipefields.RecipeData;
-import cl.govegan.mssearchfood.utils.requests.recipe.recipefields.YieldPerAge;
+import cl.govegan.mssearchfood.model.recipe.recipefields.NutritionalInfo;
+import cl.govegan.mssearchfood.model.recipe.recipefields.RecipeData;
+import cl.govegan.mssearchfood.model.recipe.recipefields.YieldPerAge;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,8 +14,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "recipes")
-public class RecipeRequest {
-      @Id private String id;
+public class Recipe {
+      @Id 
+      private String id;
       private String title;
       private String uri;
       private String image;
@@ -25,5 +26,6 @@ public class RecipeRequest {
       private YieldPerAge yieldPerAge;
       private String[] ingredientLines;
       private String[] directions;
+      private String chefTips;
       private String[] tags;
 }

@@ -78,7 +78,7 @@
 			<artifactId>google-cloud-secretmanager</artifactId>
 			<version>2.0.0</version>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
@@ -164,5 +164,18 @@
 		</plugins>
 
 	</reporting>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<dependencies>
+				<dependency>
+					<groupId>me.paulschwarz</groupId>
+					<artifactId>spring-dotenv</artifactId>
+					<version>3.0.0</version>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
 
 </project>

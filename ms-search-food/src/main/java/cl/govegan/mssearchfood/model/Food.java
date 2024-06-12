@@ -1,4 +1,4 @@
-package cl.govegan.mssearchfood.models.food;
+package cl.govegan.mssearchfood.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
