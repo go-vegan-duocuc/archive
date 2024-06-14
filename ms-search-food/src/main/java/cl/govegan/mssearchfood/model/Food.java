@@ -1,6 +1,7 @@
 package cl.govegan.mssearchfood.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
@@ -12,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @Builder
 @RequiredArgsConstructor
-@Document(collection = "foods")
+@Document(collection = "foods_v2")
 public class Food {
     @Id
     private String id;
@@ -44,6 +45,7 @@ public class Food {
     private double folicAcidMcg;
     private double folateEquivFDMcg;
     private double edibleFractionPercentage;
-    private String categoryId;
-    private String categoryName;
+
+    @DBRef
+    private FoodCategory category;
 }

@@ -12,12 +12,12 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @Builder
 @RequiredArgsConstructor
-@Document(collection = "foodCategories")
+@Document(collection = "foodCategories_v2")
 public class FoodCategory {
 
    @Id
    private String id;
    private String categoryName;
-   private int idCategory;
+   private int categoryCode;
       
 }
